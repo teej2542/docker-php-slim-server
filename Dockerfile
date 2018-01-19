@@ -12,13 +12,7 @@ RUN service apache2 restart
 
 WORKDIR /var/www/html
 
-COPY logs /var/www/html/logs
-COPY public /var/www/html/public
-COPY src /var/www/html/src
-COPY templates /var/www/html/templates
-COPY tests /var/www/html/tests
-COPY vendor /var/www/html/vendor
-COPY composer.json /var/www/html/
+COPY app/ /var/www/html
 
 RUN chmod -R 777 /var/www/html
 
